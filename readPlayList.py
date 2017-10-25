@@ -41,7 +41,8 @@ def findCommonTracks(fileNames):
                 print("%d common tracks found."
                       "Track names written to common.txt." % len(commonTracks))
 
-    def plotStats(fileName):
+
+def plotStats(fileName):
         """plot some statistics by reading track information from playlist."""
         # read in a playlist
         plist = plistlib.readPlist(fileName)
@@ -82,7 +83,8 @@ def findCommonTracks(fileNames):
         # show plot
         pyplot.show()
 
-    def findDuplicates(fileName):
+
+def findDuplicates(fileName):
         """Find duplicate tracks in given playlist"""
         print('Finding duplicate tracks in %s...' % fileName)
         # read in playlist
@@ -125,8 +127,9 @@ def findCommonTracks(fileNames):
             f.write("[%d] %s\n" % (val[0], val[1]))
             f.close()
 
-    # gather our code in a main() function
-    def main():
+
+# gather our code in a main() function
+def main():
         # create parser
         descStr = """This program analyzes playlist files (.xml) exported from iTunes."""
         parser = argparse.ArgumentParser(description=descStr)
